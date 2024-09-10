@@ -6,24 +6,28 @@ import { NotificationMessage } from "../components/Notification";
 import { TResponse } from "../types/response";
 import { validateUserData } from "../utils.ts/validateUserData";
 import { updateUserData } from "../service/updateUserData";
+import { useNavigate } from "react-router-dom";
 
 const Admin = () => {
   const [users, setUsers] = useState<TUser[]>([]);
   const currentUser = JSON.parse(localStorage.getItem("currentUser") ?? "null");
   const [response, setResponse] = useState<null | TResponse>(null);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const fetchUsers = async () => {
       try {
         const fetchedUsers = await getAllUsers();
         setUsers(fetchedUsers.users);
+        if (fetchedUsers.users.length === 0) {
+          navigate("/login");
+        }
       } catch (error) {
         console.error("Failed to fetch users", error);
       }
     };
     fetchUsers();
   }, [response]);
-
+  useEffect(() => {});
   const currentUserData = users?.find(
     (user) => user.email === currentUser?.email
   );
