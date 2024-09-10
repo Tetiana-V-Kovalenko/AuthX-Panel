@@ -24,7 +24,7 @@ Develop a user registration and login system with a simple admin panel that allo
     
     ```bash
     
-    git clone <https://github.com/Tetiana-V-Kovalenko/AuthX-Panel>
+    git clone https://github.com/Tetiana-V-Kovalenko/AuthX-Panel
     cd AuthX-Panel
     
     ```
