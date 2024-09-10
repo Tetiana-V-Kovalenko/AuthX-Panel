@@ -1,50 +1,67 @@
-# React + TypeScript + Vite
+# Untitled
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Registration/Login Form with Admin Panel
 
-Currently, two official plugins are available:
+## Objective:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Develop a user registration and login system with a simple admin panel that allows users to update their credentials. The frontend will be built using React, and the backend will use Node.js. 
 
-## Expanding the ESLint configuration
+## Tech Stack:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Frontend**: React
+- **Styled**: TailwindCSS
+- **Bundling**: Vite
+- **Backend**: Node.js
 
-- Configure the top-level `parserOptions` property like this:
+## Instructions:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. **Frontend**: Implement using React. Ensure the forms (Registration, Login) have client-side validation.
+2. **Backend**: If not using the provided backend, set up a Node.js server to handle the registration, login, and admin functionalities.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Installation and Setup:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. **Clone the Repository**
+    
+    ```bash
+    
+    git clone https://github.com/Tetiana-V-Kovalenko/AuthX-Panel
+    cd AuthX-Panel
+    
+    ```
+    
+2. **Install Dependencies**
+    - **Frontend from folder AuthX-Panel**:
+        
+        ```bash
+        npm install 
+        # or
+        yarn install
+        ```
+        
+    - **Backend** (in the `server` directory):
+        
+        ```bash
+        cd server
+        npm install
+        # or
+        yarn install
+        ```
+        
+3. **Start the Backend Server**
+    
+    ```bash
+    cd server
+    npm run dev
+    # or
+    yarn dev
+    ```
+    
+4. **Start the Frontend Project from folder AuthX-Panel**
+    
+    ```bash
+    cd ../
+    npm run dev
+    # or
+    yarn dev
+    
+    ```
